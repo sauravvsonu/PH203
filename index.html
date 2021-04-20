@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vacuum Chamber</title>
+    </head>
+
+    <body style="background-color: aliceblue;font-family: cursive;">
+
+        <!-- <div class='bg'></div> -->
+        <div class="container">
+            <h1 style="color: midnightblue;margin: 0% ;">PH203 Vacuum Science and Technology</h1>
+            <h2 style="color: green;margin: 2% ;">Throughput and Pumping Speed In A Vacuum Chamber</h2>
+            <h2 style="color: chocolate ;" id="textcal">Choose a method of Calculation: </h2>
+            <div class="homebutton"><button id='gas' style="">Gas
+                    Equation</button>
+                <button id='suction' style="">Suction
+                    Chamber</button>
+            </div>
+
+        </div>
+        <div class="name-roll">
+            <div>
+                <div class="ntitle">Name:
+                    <div>Saurav Sonu</div>
+                </div>
+            </div>
+            <div>
+                <div>Roll:
+                    <div>1901MM30</div>
+                </div>
+            </div>
+        </div>
+        <div class="dialog dialogG" style="border-radius: 20px;">
+            <span
+                style="text-align: center; font-size: 25px; color: chocolate; font-weight: 800; letter-spacing: 2px;">Gas
+                Equation</span>
+            <div class="top">
+
+                <span id="enter">Enter the Inputs</span>
+                <div class="cross-reload">
+
+                    <span class="svgrefresh reloadG"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                            style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                            <g>
+                                <g>
+                                    <path d="M446.709,166.059c-4.698-7.51-14.73-9.243-21.724-4.043l-48.677,36.519c-6.094,4.585-7.793,13.023-3.926,19.6
+                    			C384.73,239.156,391,261.656,391,285.02C391,359.464,330.443,422,256,422s-135-62.536-135-136.98
+                    			c0-69.375,52.588-126.68,120-134.165v44.165c0,12.434,14.266,19.357,23.994,11.997l120-90c8.006-5.989,7.994-18.014,0-23.994
+                    			l-120-90C255.231-4.37,241,2.626,241,15.02v45.498C123.9,68.267,31,166.001,31,285.02C31,409.093,131.928,512,256,512
+                    			s225-102.907,225-226.98C481,243.038,469.135,201.905,446.709,166.059z" />
+                                </g>
+                            </g>
+                        </svg>
+                    </span>
+                    <span class='cross crossG'>×</span>
+                </div>
+            </div>
+            <ul>
+                <li><span>Moles Of Gas</span><input type="number" onchange="calculateG()"></li>
+                </li>
+                <li><span>Pressure (in Pa)</span><input type="number" onchange="calculateG()"></li>
+                <li><span>Temperature (in K)</span><input type="number" onchange="calculateG()"></li>
+                <li><span>Time (s)</span><input type="number" onchange="calculateG()"></li>
+            </ul>
+            <button id='calcG'>Calculate</button>
+            <div class="final finalG">
+                <div class="caption">
+                    <p style="text-align:right">Calculated Throughput</p>
+                    <p style="text-align:left">Calculated Pumping speed</p>
+                </div>
+                <div class="g">
+                    <div class="g1">lorem ipsum lorem ipsum lorem ipsum</div>
+                    <div class="g2">lorem ipsum lorem ipsum lorem ipsum</div>
+                </div>
+            </div>
+        </div>
+        <div class="dialog dialogS" style="border-radius: 20px;">
+            <span
+                style="text-align: center; font-size: 25px; color: chocolate; font-weight: 800; letter-spacing: 2px;">Suction
+                Chamber</span>
+            <div class="top">
+                <span>Enter the Inputs</span>
+                <div class="cross-reload">
+
+                    <span class="svgrefresh reloadS"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                            style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                            <g>
+                                <g>
+                                    <path d="M446.709,166.059c-4.698-7.51-14.73-9.243-21.724-4.043l-48.677,36.519c-6.094,4.585-7.793,13.023-3.926,19.6
+                                    			C384.73,239.156,391,261.656,391,285.02C391,359.464,330.443,422,256,422s-135-62.536-135-136.98
+                                    			c0-69.375,52.588-126.68,120-134.165v44.165c0,12.434,14.266,19.357,23.994,11.997l120-90c8.006-5.989,7.994-18.014,0-23.994
+                                    			l-120-90C255.231-4.37,241,2.626,241,15.02v45.498C123.9,68.267,31,166.001,31,285.02C31,409.093,131.928,512,256,512
+                                    			s225-102.907,225-226.98C481,243.038,469.135,201.905,446.709,166.059z" />
+                                </g>
+                            </g>
+                        </svg>
+                    </span>
+                    <span class='cross crossS'>×</span>
+                </div>
+            </div>
+            <ul>
+                <li><span>Rotational Speed</span><input type="number"></li>
+                </li>
+                <li><span>Input Pressure (in Pa)</span><input type="number" onchange="calculateS()"></li>
+                <li><span>Output Pressure (in Pa)</span><input type="number" onchange="calculateS()"></li>
+                <li><span>Dead Space Volume (in m<sup>3</sup>)</span><input type="number" onchange="calculateS()"></li>
+                <li><span>Suction Chamber Volume (in m<sup>3</sup>)</span><input type="number" onchange="calculateS()">
+                </li>
+            </ul>
+            <button id='calcS'>Calculate</button>
+            <div class="final finalS">
+                <div class="caption">
+                    <p>Calculated Throughput</p>
+                    <p>Calculated Pumping Speed</p>
+                </div>
+                <div class="g">
+                    <div class="g1">lorem ipsum lorem ipsum lorem ipsum</div>
+                    <div class="g2">lorem ipsum lorem ipsum lorem ipsum</div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .name-roll {
+            display: grid;
+            position: fixed;
+            font-size: xx-large;
+            position: absolute;
+            bottom: 2%;
+            right: 2%;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        .name-roll div {
+            display: flex;
+
+        }
+
+
+        .bg {
+            background: #000;
+            opacity: 0.4;
+            width: 100vh;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .cross-reload {
+            display: flex;
+            width: 100px;
+            justify-content: space-around;
+        }
+
+        .svgrefresh {
+            width: 20px;
+        }
+
+        .top {
+            display: flex;
+            justify-content: space-between;
+            font-size: 40px;
+        }
+
+        #enter {
+            margin-top: 5px;
+            margin-left: 20px;
+        }
+
+        .cross {
+            color: brown;
+        }
+
+        .dialog {
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            padding: 20px;
+            border: 5px solid rgba(0, 0, 0, 0.349);
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50%;
+            background: white;
+            z-index: 999;
+        }
+
+        .dialogS {
+            display: none;
+            background: #ececf9;
+        }
+
+        .dialogG {
+            display: none;
+            background: #ececf9;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        p {
+            display: block;
+            margin: 0;
+        }
+
+        #dialogS button {
+            font-size: 25px;
+        }
+
+        .final {
+            display: none;
+            flex-direction: column;
+        }
+
+        .caption {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .g {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 0 14%;
+        }
+
+        .g1,
+        .g2 {
+            border: 2px solid black;
+            margin: 8px;
+            padding: 20px;
+            text-align: center;
+            width: 20%;
+        }
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px;
+            width: 85%;
+            font-size: 20px;
+        }
+
+        button {
+            padding: 20px 30px;
+            font-size: 30px;
+            margin: 20px;
+            border-radius: 20px;
+            box-shadow: 3px 4px black;
+        }
+
+        span {
+            margin-right: 10px;
+        }
+
+        input {
+            margin-right: 10px;
+        }
+
+        h1 {
+            position: absolute;
+            font-size: 50px;
+            top: 20vh;
+        }
+
+        h2 {
+            position: absolute;
+            font-size: 30px;
+            top: 30vh;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        #textcal {
+            margin-top: 12%;
+        }
+
+        #gas {
+            background: rgba(0, 0, 0, 0.349);
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: rgb(249, 252, 235);
+            position: absolute;
+            top: 60%;
+            left: 19%;
+        }
+
+        #suction {
+            background: rgba(0, 0, 0, 0.349);
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: rgb(249, 252, 235);
+            position: absolute;
+            top: 60%;
+            right: 15%;
+        }
+
+        @media only screen and (max-width: 450px) {
+            .container {
+                display: grid;
+                text-align: center;
+                margin: 0;
+                padding: 0;
+
+            }
+
+            .container h1,
+            .container h2 {
+                font-size: 1rem;
+            }
+
+            #textcal {
+                margin-top: 25%;
+            }
+
+            .homebutton {
+                position: relative;
+            }
+
+            #gas, #suction {
+                width: 150px;
+                font-size: medium;
+            }
+
+            .name-roll {
+                font-size: large;
+            }
+        }
+
+    </style>
+    <script>
+        var sucBtn = document.getElementById('suction')
+        var gasBtn = document.getElementById('gas')
+        var dialogS = document.querySelector('.dialogS')
+        var dialogG = document.querySelector('.dialogG')
+        var crossS = document.querySelector('.crossS')
+        var crossG = document.querySelector('.crossG')
+        var reloadG = document.querySelector('.reloadG')
+        var reloadS = document.querySelector('.reloadS')
+        var calcG = document.getElementById('calcG')
+        var calcS = document.getElementById('calcS')
+        var inputG = dialogG.querySelectorAll('input');
+        var inputS = dialogS.querySelectorAll('input');
+        var countG = 0;
+        var countS = 0;
+
+        function gas_equation() {
+            try {
+                var inputs = dialogG.querySelectorAll('input');
+                if (inputs[1].value == 0) throw "Pressure can't be zero";
+                if (inputs[3].value == 0) throw "Time can't be zero";
+                var Q = (inputs[0].value * 8.314 * inputs[2].value) / inputs[3].value;
+                var S = Q / inputs[1].value;
+                var q = Math.round(Q * 10000) / 10000;
+                var s = Math.round(S * 10000) / 10000;
+                dialogG.querySelector('.finalG').style.display = 'flex';
+                dialogG.querySelector('.g1').textContent = q + " W";
+                dialogG.querySelector('.g2').textContent = s + " m3/s";
+            }
+            catch (err) {
+                MessageChannel.innerHTML = "Invalid Input:" + err;
+                window.alert("Invalid Input: " + err);
+            }
+        }
+        function suction_chamber() {
+            try {
+                var inputs = dialogS.querySelectorAll('input');
+                if (inputs[1].value == 0) throw "Input Pressure can't be zero";
+                var Q = inputs[0].value * (inputs[4].value * inputs[1].value - inputs[3].value * inputs[2].value)
+                var S = Q / inputs[1].value;
+                var q = Math.round(Q * 10000) / 10000;
+                var s = Math.round(S * 10000) / 10000;
+                dialogS.querySelector('.finalS').style.display = 'flex';
+                dialogS.querySelector('.g1').textContent = q + " W";
+                dialogS.querySelector('.g2').textContent = s + " m3/s";
+            }
+            catch (err) {
+                MessageChannel.innerHTML = "Invalid Input:" + err;
+                window.alert("Invalid Input: " + err);
+            }
+        }
+
+        function calculateG() {
+            if (countG > 0) {
+                if (inputG[1].value == 0 || inputG[3].value == 0) {
+                    dialogG.querySelector('.g1').textContent = "Undefine";
+                    dialogG.querySelector('.g2').textContent = "Undefine";
+                }
+                else
+                    gas_equation();
+            }
+        }
+
+        function calculateS() {
+            if (countS > 0) {
+                if (inputS[1].value == 0) {
+
+                    dialogS.querySelector('.g2').textContent = "Undefine";
+                }
+                else
+                    suction_chamber();
+            }
+        }
+
+        sucBtn.addEventListener('click', function () {
+            if (dialogS.style.display == 'flex') {
+                dialogS.style.display = 'none';
+            }
+            else {
+                dialogS.style.display = 'flex';
+                dialogG.style.display = 'none';
+            }
+        })
+        crossS.addEventListener('click', function () {
+            dialogS.style.display = 'none';
+            dialogS.querySelector('.finalS').style.display = 'none';
+            for (var i = 0; i < inputS.length; ++i) {
+                inputS[i].value = 0;
+            }
+        })
+        gasBtn.addEventListener('click', function () {
+            if (dialogG.style.display == 'flex') {
+                dialogG.style.display = 'none';
+            }
+            else {
+                dialogG.style.display = 'flex';
+                dialogS.style.display = 'none';
+            }
+        })
+        crossG.addEventListener('click', function () {
+            dialogG.style.display = 'none';
+            dialogG.querySelector('.finalG').style.display = 'none';
+
+            for (var i = 0; i < inputG.length; ++i) {
+                inputG[i].value = 0;
+            }
+
+        })
+        calcG.addEventListener('click', function () {
+            gas_equation();
+            countG++;
+        })
+
+        calcS.addEventListener('click', function () {
+            suction_chamber();
+            countS++;
+        })
+
+        reloadG.addEventListener('click', function () {
+            dialogG.querySelector('.finalG').style.display = 'none';
+            countG = 0
+            for (var i = 0; i < inputG.length; ++i) {
+                inputG[i].value = 0;
+            }
+
+        })
+
+        reloadS.addEventListener('click', function () {
+            dialogS.querySelector('.finalS').style.display = 'none';
+            countS = 0;
+            for (var i = 0; i < inputS.length; ++i) {
+                inputS[i].value = 0;
+            }
+
+        })
+
+    </script>
+
+</html>
