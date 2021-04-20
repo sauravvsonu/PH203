@@ -7,7 +7,7 @@
         <title>Vacuum Chamber</title>
     </head>
 
-    <body style="background-color: aliceblue;font-family: monospace;">
+    <body style="background-color: aliceblue;font-family: cursive;">
 
         <!-- <div class='bg'></div> -->
         <div class="container">
@@ -35,7 +35,7 @@
         </div>
         <div class="dialog dialogG" style="border-radius: 20px;">
             <span
-                style="text-align: center; font-size: 25px; color: chocolate; font-weight: 800; letter-spacing: 2px;">Gas
+                style="text-align: center; font-size: 1.2em; color: chocolate; font-weight: 800; letter-spacing: 2px;">Gas
                 Equation</span>
             <div class="top">
 
@@ -56,7 +56,7 @@
                             </g>
                         </svg>
                     </span>
-                    <span class='cross crossG'>×</span>
+                    <p class='cross crossG'>×</p>
                 </div>
             </div>
             <ul>
@@ -73,14 +73,14 @@
                     <p style="text-align:left">Calculated Pumping speed</p>
                 </div>
                 <div class="g">
-                    <div class="g1">lorem ipsum lorem ipsum lorem ipsum</div>
-                    <div class="g2">lorem ipsum lorem ipsum lorem ipsum</div>
+                    <div class="g1"></div>
+                    <div class="g2"></div>
                 </div>
             </div>
         </div>
         <div class="dialog dialogS" style="border-radius: 20px;">
             <span
-                style="text-align: center; font-size: 25px; color: chocolate; font-weight: 800; letter-spacing: 2px;">Suction
+                style="text-align: center; font-size: 1.2em; color: chocolate; font-weight: 800; letter-spacing: 2px;">Suction
                 Chamber</span>
             <div class="top">
                 <span>Enter the Inputs</span>
@@ -100,7 +100,7 @@
                             </g>
                         </svg>
                     </span>
-                    <span class='cross crossS'>×</span>
+                    <p class='cross crossS'>×</p>
                 </div>
             </div>
             <ul>
@@ -119,8 +119,8 @@
                     <p>Calculated Pumping Speed</p>
                 </div>
                 <div class="g">
-                    <div class="g1">lorem ipsum lorem ipsum lorem ipsum</div>
-                    <div class="g2">lorem ipsum lorem ipsum lorem ipsum</div>
+                    <div class="g1"></div>
+                    <div class="g2"></div>
                 </div>
             </div>
         </div>
@@ -229,6 +229,14 @@
             font-size: 25px;
         }
 
+        .dialog button {
+            padding: 20px 30px;
+            font-size: 30px;
+            margin: 20px;
+            border-radius: 20px;
+            box-shadow: 3px 4px black;
+        }
+
         .final {
             display: none;
             flex-direction: column;
@@ -253,6 +261,7 @@
             padding: 20px;
             text-align: center;
             width: 20%;
+            border-radius: 20px;
         }
 
         li {
@@ -263,13 +272,7 @@
             font-size: 20px;
         }
 
-        button {
-            padding: 20px 30px;
-            font-size: 30px;
-            margin: 20px;
-            border-radius: 20px;
-            box-shadow: 3px 4px black;
-        }
+        button {}
 
         span {
             margin-right: 10px;
@@ -307,6 +310,11 @@
             position: absolute;
             top: 60%;
             left: 19%;
+            padding: 20px 30px;
+            font-size: 30px;
+            margin: 20px;
+            border-radius: 20px;
+            box-shadow: 3px 4px black;
         }
 
         #suction {
@@ -317,7 +325,13 @@
             position: absolute;
             top: 60%;
             right: 15%;
+            padding: 20px 30px;
+            font-size: 30px;
+            margin: 20px;
+            border-radius: 20px;
+            box-shadow: 3px 4px black;
         }
+
 
         @media only screen and (max-width: 450px) {
             .container {
@@ -341,13 +355,76 @@
                 position: relative;
             }
 
-            #gas, #suction {
+            #gas,
+            #suction {
+                height: 46px;
                 width: 150px;
-                font-size: medium;
+                font-size: 12px;
+                justify-self: center;
+                padding: 0px;
+                margin: 10px;
+                border-radius: 20px;
+                box-shadow: 1px 2px black;
             }
 
             .name-roll {
                 font-size: large;
+            }
+
+            .dialog {
+                width: 80%;
+                height: 40%;
+
+            }
+
+            li {
+                font-size: 8px;
+                margin: 3px 0px;
+            }
+
+            li input {
+                width: 30%;
+                height: 10px;
+                font-size: 8px;
+            }
+
+            .dialog button {
+                padding: 0px 0px;
+                font-size: 10px;
+                margin: 10px auto;
+                border-radius: 20px;
+                box-shadow: 1px 2px black;
+                width: 50%;
+                height: 20px;
+            }
+
+            .top span {
+                font-size: 20px;
+                margin-top: 15px;
+            }
+
+            .final {
+                font-size: 8px;
+
+            }
+
+            .g {
+                width: 100%;
+                margin: 0px;
+            }
+
+            .g1,
+            .g2 {
+                width: 80%;
+                height: 10px;
+                font-size: 8px;
+                padding: 5px;
+                border-radius: 20px;
+            }
+
+            .cross {
+                font-size: 34px;
+
             }
         }
 
